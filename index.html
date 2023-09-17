@@ -151,52 +151,6 @@
         </div>
     </section>
 
-    <section class="faqs">
-        <h2>Frequently Asked Questions</h2>
-        <div class="container faqs-container">
-            <article class="faq">
-                <div class="faq-icon"><i class="uil uil-plus"></i> </div>
-                <div class="question-answer">
-                    <h4>How do I know the right courses for me?</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                         Repellat hic cupiditate omnis corporis tenetur libero dignissimos? 
-                         Aliquid aperiam quidem magni.
-                    </p>
-                </div>
-            </article>
-            <article class="faq">
-                <div class="faq-icon"><i class="uil uil-plus"></i> </div>
-                <div class="question-answer">
-                    <h4>How do I know the right courses for me?</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                         Repellat hic cupiditate omnis corporis tenetur libero dignissimos? 
-                         Aliquid aperiam quidem magni.
-                    </p>
-                </div>
-            </article>
-            <article class="faq">
-                <div class="faq-icon"><i class="uil uil-plus"></i> </div>
-                <div class="question-answer">
-                    <h4>How do I know the right courses for me?</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                         Repellat hic cupiditate omnis corporis tenetur libero dignissimos? 
-                         Aliquid aperiam quidem magni.
-                    </p>
-                </div>
-            </article>
-            <article class="faq">
-                <div class="faq-icon"><i class="uil uil-plus"></i> </div>
-                <div class="question-answer">
-                    <h4>How do I know the right courses for me?</h4>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                         Repellat hic cupiditate omnis corporis tenetur libero dignissimos? 
-                         Aliquid aperiam quidem magni.
-                    </p>
-                </div>
-            </article>
-        </div>
-    </section>
-
     <section class="container testimonials-container swiper mySwiper">
         <h2>Students' Testimonial</h2>
         <div class="swiper-wrapper">
@@ -263,23 +217,72 @@
         </div>
         <div class="swiper-pagination"></div>
     </section>
+
+    <section class="faqs">
+        <h2>Frequently Asked Questions</h2>
+        <div class="container faqs-container">
+            <article class="faq">
+                <div class="faq-icon"><i class="uil uil-plus"></i> </div>
+                <div class="question-answer">
+                    <h4>How do I know the right courses for me?</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                         Repellat hic cupiditate omnis corporis tenetur libero dignissimos? 
+                         Aliquid aperiam quidem magni.
+                    </p>
+                </div>
+            </article>
+            <article class="faq">
+                <div class="faq-icon"><i class="uil uil-plus"></i> </div>
+                <div class="question-answer">
+                    <h4>How do I know the right courses for me?</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                         Repellat hic cupiditate omnis corporis tenetur libero dignissimos? 
+                         Aliquid aperiam quidem magni.
+                    </p>
+                </div>
+            </article>
+            <article class="faq">
+                <div class="faq-icon"><i class="uil uil-plus"></i> </div>
+                <div class="question-answer">
+                    <h4>How do I know the right courses for me?</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                         Repellat hic cupiditate omnis corporis tenetur libero dignissimos? 
+                         Aliquid aperiam quidem magni.
+                    </p>
+                </div>
+            </article>
+            <article class="faq">
+                <div class="faq-icon"><i class="uil uil-plus"></i> </div>
+                <div class="question-answer">
+                    <h4>How do I know the right courses for me?</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                         Repellat hic cupiditate omnis corporis tenetur libero dignissimos? 
+                         Aliquid aperiam quidem magni.
+                    </p>
+                </div>
+            </article>
+        </div>
+    </section>
     <script src="./main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
    
    
        <script>
-          var swiper = new Swiper(".mySwiper", {
-           effect: "cube",
-           grabCursor: true,
-           cubeEffect: {
-             shadow: true,
-             slideShadows: true,
-             shadowOffset: 150,
-             shadowScale: 0.8,
-           },
-           pagination: {
-             el: ".swiper-pagination",
-    },
-  });
+           var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        600: {
+            slidesPerView: 2
+        },
+        900: {
+            slidesPerView: 3
+        }
+      }
+    });
       </script>
 </body>
