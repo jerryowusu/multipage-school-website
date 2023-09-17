@@ -14,6 +14,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
+    <!-- swipper js cdn -->
+    <link
+  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+
 </head>
 <body>
     <nav>
@@ -192,5 +196,90 @@
             </article>
         </div>
     </section>
+
+    <section class="container testimonials-container swiper mySwiper">
+        <h2>Students' Testimonial</h2>
+        <div class="swiper-wrapper">
+            <article class="testimonial swiper-slide">
+                <div class="avatar">
+                    <img src="./assets/Jerry.jpeg" alt="profile">
+                </div>
+                <div class="testimonial-info">
+                    <h5>Jerry Owusu</h5>
+                    <small>Student</small>
+                </div>
+                <div class="testimonial-body">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Neque nihil ipsam quas quos sit vero laudantium.
+                         Laboriosam minus reiciendis quisquam.
+                    </p>
+                </div>
+            </article>
+            <article class="testimonial swiper-slide">
+                <div class="avatar">
+                    <img src="./assets/Jerry.jpeg" alt="profile">
+                </div>
+                <div class="testimonial-info">
+                    <h5>Jerry Owusu</h5>
+                    <small>Student</small>
+                </div>
+                <div class="testimonial-body">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Neque nihil ipsam quas quos sit vero laudantium.
+                         Laboriosam minus reiciendis quisquam.
+                    </p>
+                </div>
+            </article>
+            <article class="testimonial swiper-slide">
+                <div class="avatar">
+                    <img src="./assets/Jerry.jpeg" alt="profile">
+                </div>
+                <div class="testimonial-info">
+                    <h5>Jerry Owusu</h5>
+                    <small>Student</small>
+                </div>
+                <div class="testimonial-body">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Neque nihil ipsam quas quos sit vero laudantium.
+                         Laboriosam minus reiciendis quisquam.
+                    </p>
+                </div>
+            </article>
+            <article class="testimonial swiper-slide">
+                <div class="avatar">
+                    <img src="./assets/Jerry.jpeg" alt="profile">
+                </div>
+                <div class="testimonial-info">
+                    <h5>Jerry Owusu</h5>
+                    <small>Student</small>
+                </div>
+                <div class="testimonial-body">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                        Neque nihil ipsam quas quos sit vero laudantium.
+                         Laboriosam minus reiciendis quisquam.
+                    </p>
+                </div>
+            </article>
+        </div>
+        <div class="swiper-pagination"></div>
+    </section>
     <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+   
+   
+       <script>
+          var swiper = new Swiper(".mySwiper", {
+           effect: "cube",
+           grabCursor: true,
+           cubeEffect: {
+             shadow: true,
+             slideShadows: true,
+             shadowOffset: 150,
+             shadowScale: 0.8,
+           },
+           pagination: {
+             el: ".swiper-pagination",
+    },
+  });
+      </script>
 </body>
