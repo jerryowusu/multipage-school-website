@@ -58,19 +58,23 @@ h5 {
 }
 
 h1 {
-    font-size: 2.4rem;
+    font-size: 2.0rem;
 }
 
 h2 {
-    font-size: 2rem;
-}
-
-h3{
     font-size: 1.6rem;
 }
 
+h3{
+    font-size: 1.2rem;
+}
+
 h4 {
-    font-size: 1.3rem;
+    font-size: 0.9rem;
+}
+
+p {
+    0.6rem;
 }
 
 a {
@@ -87,8 +91,10 @@ img {
     display: inline-block;
     background: var(--color-white);
     color: var(--color-black);
+    margin: 1rem;
     padding: 1rem 2rem;
     border: 1px solid transparent;
+    border-radius: 2rem;
     font-weight: 500;
     transition: var(--transition)
 }
@@ -151,6 +157,7 @@ header {
     overflow: hidden;
     height: 70vh;
     margin-bottom: 5rem;
+    margin-top: 5rem;
 }
 
 .header-container {
@@ -210,21 +217,19 @@ header {
 }
 
 .category:nth-child(2) .category-icon {
-    background: var(--color-danger)
+    background: var(--color-danger);
 }
-background: var(--color-succes
-s)
 
 .category:nth-child(3) .category-icon {
-    background: var(--color-success)
+    background: var(--color-success);
 }
 
 .category:nth-child(4) .category-icon {
-    background: var(--color-warning)
+    background: var(--color-warning);
 }
 
 .category:nth-child(5) .category-icon {
-    background: var(--color-success)
+    background: var(--color-danger-variant);
 }
 
 
@@ -238,6 +243,7 @@ s)
 
 .courses {
     margin-top: 10rem;
+    padding: 1rem 4rem 6rem;
 }
 
 .courses-container {
@@ -265,6 +271,12 @@ s)
 course-info p {
     margin: 1.2rem 0 2rem;
     font-size: 0.9rem;
+}
+
+.course-image > img {
+    width: 50%;
+    height: 70%;
+    margin: auto;
 }
 
 .faqs {
@@ -516,7 +528,7 @@ footer ul li a:hover {
     }
 
     .courses {
-        margin-top: 0;
+        /* margin-top: 0; */
     }
 
     .courses-container {
