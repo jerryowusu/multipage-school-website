@@ -122,6 +122,106 @@
     padding: 1rem;
 }
 
+/* Contact us */
+
+.contact > .container {
+    align-items: stretch;
+}
+
+.contact-container {
+    background: var(--color-bg1);
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 4rem;
+    height: 30rem;
+    margin: 7rem auto;
+    border-radius: 1rem;
+}
+
+/* Aside */
+
+.contact-aside {
+    background: var(--color-primary);
+    padding: 3rem;
+    border-radius: 1rem;
+    position: relative;
+    bottom: 11rem;
+}
+
+.aside-image {
+    width: 12rem;
+    margin-bottom: 2rem;
+}
+
+.contact-aside h2 {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.contact-aside p {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+.contact-details li {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact-socials {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: 3rem;
+}
+
+.contact-socials a {
+    background: var(--color-bg2);
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.contact-socials a:hover {
+    background: transparent;
+}
+
+/* Form */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    postion: relative;
+    gap: 1.2rem;
+    margin-right: 4rem;
+}
+
+.form-name {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.form input[type="text"] {
+    width: 50%;
+}
+
+input, 
+textarea {
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-bg);
+    color: var(--color-white);
+}
+
+.form .btn {
+    width: max-content;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
 /* Media Query: Tablet */
 
 @media screen and (max-width: 1024px) {
@@ -147,7 +247,32 @@
     .team-member {
         padding: 1rem;
     }
+
+    .contact {
+        padding-bottom: 0;
+    }
+
+    .contact-container {
+        gap: 1.5rem;
+        margin-top: 3rem;
+        height: auto;
+        padding: 1.5rem;
+    }
+
+    .contact-aside {
+        width: auto;
+        padding: 1.5rem;
+        bottom: 0;
+    }
+
+    .form {
+        align-self: center;
+        margin-right: 1.5rem;
+    }
+
 }
+
+
 
 
 /* Media Query: Phones */
@@ -169,5 +294,24 @@
 
     .team-member p {
         margin-bottom: 1.5rem;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .form {
+        margin: 0 1.5rem 3rem;
+    }
+
+    .form-name {
+        flex-direction: column;
+    }
+
+    .form-name input[type='text'] {
+        width: 100%;
     }
 }

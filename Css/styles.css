@@ -22,8 +22,8 @@
     --color-bg2: #424890;
 
     --container-width-lg: 76%;
-    --container-width-md: 90%;
-    --container-width-sm: 94%;
+    --container-width-md: 85%;
+    --container-width-sm: 92%;
 
     --transition: all 400ms ease;
 }
@@ -368,6 +368,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 4rem;
+    margin-bottom: -12rem;
 }
 
 .footer-container > div h4 {
