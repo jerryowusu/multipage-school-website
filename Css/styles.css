@@ -535,3 +535,70 @@ footer ul li a:hover {
     }
 
 }
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: var(--container-width-sm);
+    }
+
+    .nav-menu {
+        right: 3%;
+    }
+
+    .nav-container {
+        padding: 1rem;
+    }
+
+    header {
+        height: 100vh;
+    }
+
+    .header-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .header-left p {
+        margin-bottom: 1.3rem;
+    }
+
+    .categories-right {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.7rem;
+    }
+
+    .category {
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    .category-icon {
+        margin-top: 4px;
+        display: inline-block;
+    }
+
+    .courses-container {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial-body {
+        padding: 1.2rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer-1 p {
+        margin: 1rem auto;
+    }
+
+    .footer-socials {
+        justify-content: center;
+
+    }
+
+}
