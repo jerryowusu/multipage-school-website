@@ -1,4 +1,6 @@
-.about-achievement {
+/* Achievement section */
+
+.achievement {
     margin-top: 4rem;
     background: red;
 }
@@ -9,7 +11,7 @@
     gap: 5rem;
 }
 
-.about-achievement-right > p {
+.achievement-right > p {
     margin: 1.6rem 0 2.5rem;
 }
 
@@ -51,4 +53,121 @@
 
 .achievement-card p {
     margin-top: 1rem;
+}
+
+/* Team section */
+
+.team {
+    background: var(--color-bg1);
+    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5);
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.team-member {
+    background: var(--color-bg2);
+    padding: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.team-member:hover {
+    background: transparent;
+    border-color: var(--color-primary);
+}
+
+.team-member img {
+    filter: saturate(0);
+}
+
+.team-member:hover img {
+    border-radius: 50%;
+    filter: saturate(1);
+    transition: var(--transition);
+}
+
+.team-member-info * {
+    text-align: center;
+    margin-top: 1.4rem;
+}
+
+.team-member-info p {
+    color: var(--color-light);
+}
+
+.team-member-socials {
+    position: absolute;
+    top: 50%;
+    right: -100%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    background: var(--color-primary);
+    border-radius: 1rem 0 0 1rem;
+    box-shadow: -2rem 0 2rem rgba(0, 0, 0, 0.3);
+    transition: var(--transition)
+}
+
+.team-member:hover .team-member-socials {
+    right: 0;
+}
+
+.team-member-socials a {
+    padding: 1rem;
+}
+
+/* Media Query: Tablet */
+
+@media screen and (max-width: 1024px) {
+    .achievements {
+        margin-top: 2rem;
+    }  
+
+    .achievement-container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .achievement-left {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .team-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5em;
+    }
+
+    .team-member {
+        padding: 1rem;
+    }
+}
+
+
+/* Media Query: Phones */
+
+@media screen and (max-width: 600px) {
+    .achievement-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.7rem;
+    }
+    
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.7rem;
+    }
+
+    .team-member {
+        padding: 0;
+    }
+
+    .team-member p {
+        margin-bottom: 1.5rem;
+    }
 }
