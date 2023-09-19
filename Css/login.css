@@ -5,6 +5,8 @@ body {
 .enroll-forms {
     height: 100vh;
     justify-content: center;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
 }
 
 .enroll-form {
@@ -92,6 +94,7 @@ body {
 
 .login-link,
 .signup-link {
+    font-size: 1.2rem;
     color: var(--color-light)
 }
 
