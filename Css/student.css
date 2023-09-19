@@ -1,0 +1,77 @@
+/* This code sets the width of any table to 100% of its container */
+body>table{
+    width: 100%;
+}
+
+/* This code sets the table border to collapse and centers the text in the table cells */
+table{
+    border-collapse:collapse;
+    text-align: center;
+}
+
+/* This code sets the width of any table with class 'list' to 100% and left-aligns the text in its cells */
+table.list{
+    width: 100%;
+    text-align: left;
+}
+
+/* This code left-aligns the text in all table cells */
+table.list td{
+    text-align: left;
+}
+
+/* This code sets the border style and color, text alignment, and padding for all table cells and header cells */
+td,th{
+    border:1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+/* This code sets the background color for every even-numbered row in any table with class 'list', as well as the table header row */
+tr:nth-child(even),table.list thead>tr{
+    background-color:rgb(235,191,221);
+}
+
+/* This code sets the width, padding, margin, border, and border-radius for all text and number input fields */
+input[type=text],input[type=number]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border:1px solid #ccc;
+    border-radius:4px;
+    box-sizing:border-box;
+}
+
+/* This code sets the width, background color, text color, padding, margin, border, border-radius, and cursor for all submit input fields */
+input[type=submit]{
+    width: 30%;
+    background-color:#ddd;
+    color:#000;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border:none;
+    border-radius:4px;
+    cursor: pointer;
+}
+
+/* This code sets the background color, padding, and border for all form elements */
+form{
+    background-color:rgb(236,191,234);
+    padding: 10px;
+    border:solid 5px #f0f;
+}
+
+/* This code centers any text within an element with class 'form-action-buttons' and sets the font size to 50 pixels */
+form div.form-action-buttons{
+    text-align: center;
+    font-size: 50px;
+}
+
+/* This code sets the cursor, text decoration, color, and margin for all anchor elements */
+a{
+    cursor:pointer;
+    text-decoration: underline;
+    color:#0000ee;
+    margin-right:4px ;
+}

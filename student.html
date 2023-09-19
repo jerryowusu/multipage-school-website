@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Student Management System with Local Storage</title>
+    <link rel="stylesheet" href="./Css/styles.css">
+    <link rel="stylesheet" href="student.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body style="background-color: rgb(178,239,241)">
+
+    <!-- A heading for the student management system -->
+    <CENTER><h1>Student Management System</h1></CENTER>
+
+    <!-- A form for adding student details -->
+    <table>
+        <tr>
+            <td>
+                <h2>SCIENCE SCHOOL</h2>
+                <h3>Student Form</h3>
+                <form id="form">
+                    <input type="hidden" name="id" id="id">
+                    <label for="">Full Name</label>
+                    <input type="text" placeholder="Enter the user Name" class="form-control" name="name" id="name" required>
+                    <br>
+                    <label for="">Enrollment No</label>
+                    <input type="text" placeholder="Enter the Enrollment Number" class="form-control" name="rollNo" id="rollNo" required>
+                    <br>
+                    <label for="">Student Class</label>
+                    <input type="text" placeholder="Enter the Student Class" class="form-control" name="stdClass" id="stdClass" required>
+                    <br>
+                    <label for="">Telephone Number</label>
+                    <input type="number" placeholder="Enter the Telephone Number" class="form-control" name="tnum" id="tnum" required>
+                    <br>
+                    <label for="">Age</label>
+                    <input type="number" placeholder="Enter the Age" class="form-control" name="age" id="age" required>
+                    <br>
+                    <div class="form-action-buttons">
+                        <button class="btn btn-sm btn-primary" type="button" onclick="save()">Save</button>
+                        <button class="btn btn-sm btn-primary" type="button" onclick="clearData()">Reset</button>
+                    </div>
+                </form>
+            </td>
+            <td>
+                <!-- An image for the student management system -->
+                <table class="image">
+                    <center><img src="student.jpg"></center>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- A table for displaying a list of students -->
+    <table class="list" id="stdlist" class="table table-striped">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Enrollment No</th>
+                <th>Student Class</th>
+                <th>Telephone Number</th>
+                <th>Age</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="table">
+
+        </tbody>
+    </table>
+    
+    <!-- A script for adding functionality to the student management system -->
+    <script src="student.js"></script>
+
+</body>
+</html>

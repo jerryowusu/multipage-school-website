@@ -1,0 +1,140 @@
+body {
+    display: grid;
+}
+
+.enroll-forms {
+    height: 100vh;
+    justify-content: center;
+}
+
+.enroll-form {
+    position: absolute;
+    height: auto;
+    max-width: 430px;
+    flex-direction: column;
+    padding: 4rem 0;
+    border-radius: 1rem;
+    background: var(--color-bg2);
+}
+
+.enroll-form.show-signup {
+    opacity: 0;
+    pointer-events: none;
+}
+.enroll-forms.show-signup .enroll-form.signup-container {
+    opacity: 1;
+    pointer-events: auto;
+}
+.enroll-forms.show-signup .enroll-form.login-container{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.input-field {
+    margin: 1rem auto;
+    width: 90%;
+    /* padding: 1rem; */
+
+}
+
+.input-field input[type='email'] {
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.input-field input[type='email']:focus {
+    border: 0.2rem solid var(--color-primary);
+}
+
+.input-field input[type='password'] {
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.input-field input[type='password']:focus {
+    border: 0.2rem solid var(--color-primary);
+}
+
+.form-link {
+    margin: auto;
+}
+
+.line{
+    position: relative;
+    height: 0.08rem;
+    width: 100%;
+    margin: 3rem 0;
+    background-color: #d4d4d4;
+}
+
+.line::before{
+    content: 'Or';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--color-white);
+    color: #8b8b8b;
+    padding: 0 15px;
+}
+
+.form-link {
+    text-align: center;
+}
+
+.forgot-password {
+    color: var(--color-white);
+}
+
+.forgot-password:hover {
+    color: var(--color-danger);
+}
+
+.login-link,
+.signup-link {
+    color: var(--color-light)
+}
+
+.login-link:hover,
+ .signup-link:hover {
+    color: var(--color-success)
+}
+
+.media-options {
+    display: flex;
+}
+
+.facebook,
+.google {
+    width: 90%;
+    background: var(--color-primary);
+    padding: 1rem;
+    margin: 1rem auto;
+    border-radius: 0.6rem;
+    text-align: center;
+}
+
+.google {
+    background: var(--color-white);
+    color: var(--color-bg1);
+    opacity: 0.7;
+}
+
+.google:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+    opacity: 1;
+}
+
+.facebook:hover {
+    background: var(--color-white);
+    color: var(--color-primary);
+    opacity: 0.9;
+}
+
+.login-button,
+.signup-button {
+    width: 13rem;
+    cursor: pointer;
+}
+
