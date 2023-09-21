@@ -7,6 +7,8 @@
        <title>My Multi-Page school website</title>
     <link rel="stylesheet" href="./Css/styles.css">
     <link rel="stylesheet" href="./Css/student.css">
+    <link rel="stylesheet" href="./Css/login.css">
+
 
     <!-- iconscout -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
@@ -70,28 +72,73 @@
                         <label for="phone">Phone: </label>
                         <input type="number" name="phone" placeholder="phone" required>
                     </div>
+                    <button class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
 
-    
-    <!-- A table for displaying a list of students -->
-    <table class="list" id="stdlist" class="table table-striped">
-        <thead>
-            <tr>
-                <th>Full Name</th>
-                <th>Enrollment No</th>
-                <th>Student Class</th>
-                <th>Telephone Number</th>
-                <th>Age</th>
-                <th>Edit</th>
-                <th>Delete</th>
-            </tr>
-        </thead>
-        <tbody id="table">
+        <div class="select-courses">
+            <h3>Courses</h3>
+            <label for="pet-select">Choose a Course:</label>
+            <select title="courses" name="courses" class="select-course decorated">
+              <option value="">--Please choose an option--</option>
+              <option value="dog">Course 1</option>
+              <option value="cat">Course 2</option>
+              <option value="hamster">Course 3</option>
+              <option value="parrot">Course 4</option>
+              <option value="spider">Course 5</option>
+              <option value="goldfish">Course 6</option>
+            </select>
+        </div>
 
-        </tbody>
-    </table>
+        <div class="settings-page">
+            <h3>Settings</h3>
+            <form action="" class="settings-form">
+                <div class="current-password">
+                    <div class="field input-field">
+                        <label for="Current Password">Password:  </label>
+                        <input type="password" name="Current password" placeholder="current password" required>
+                    </div>
+                    <button class="btn">Verify</button>
+                </div>
+                <div class="change-password">
+                    <div class="field input-field">
+                        <label for="New Password">New Password:  </label>
+                        <input type="password" placeholder="New Password" class="input password" required> 
+                    </div>
+                    <div class="field input-field">
+                        <label for="Confirm Password">Confirm Password:  </label>
+                        <input type="password" placeholder="Confirm Password" class="input confirm-password" required> 
+                        <i class="bx bx-hide eye-icon"></i>
+                    </div>
+                    <div class="field button-field">
+                        <button class="btn btn-primary">
+                            <a href="student.html">Change</a>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="generate-list">
+            <table class="list" id="stdlist" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Enrollment No</th>
+                        <th>Student Class</th>
+                        <th>Telephone Number</th>
+                        <th>Age</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="table">
+        
+                </tbody>
+            </table>
+        </div>
+    <!-- A table for displaying a list of students -->
 </section>
 
     <footer class="footer">

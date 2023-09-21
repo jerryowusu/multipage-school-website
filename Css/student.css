@@ -51,7 +51,40 @@ aside {
 }
 
 .input-container input {
+    width: 80%;
+    margin: auto;
     padding: 0.5rem 0.5rem;
     align-items: center;
     border-radius: 0.3rem;
 }
+
+.settings-page {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.settings-page h3 {
+    margin: auto;
+}
+
+.settings-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+label {
+    font-family: sans-serif;
+    font-size: 1rem;
+    padding-right: 10px;
+  }
+  
+  select {
+    font-size: 0.9rem;
+    padding: 1rem;
+    border-radius: 0.2rem;
+  }
