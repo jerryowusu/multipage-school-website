@@ -177,6 +177,96 @@ settingsBtn.addEventListener('click', function showSettings() {
 })
 
 
+// Save to localStorage
+
+window.onload = function() {
+    contactList = JSON.parse(localStorage.getItem("listItem")) ?? []
+    // check for localStorage
+    if (localStorage) {
+        // add an eventlistener for form submissions
+
+        document.getElementById('student-form').addEventListener('submit', function(){
+            const name = document.querySelector('#name').value;
+            const course = document.querySelector('#course').value;
+            const email = document.querySelector('#email').value;
+            const phone = document.querySelector('#phone').value;
+
+            const data = {
+                name: name,
+                course: course,
+                email: email,
+                phone: phone
+            }
+            contactList.push(data);
+            
+            localStorage.setItem('data', JSON.stringify(contactList))
+        })
+    }
+}
+
+console.log(window.localStorage.getItem('data'))
 
 
-generateBtn.addEventListener('click', allData)
+function getDataFromLocalStorage() {
+    myData = JSON.parse(localStorage.getItem("data")) ?? [];
+
+    table.innerHTML = ``;
+
+    myData.forEach(function(value) {
+
+
+    table.innerHTML += `
+        <tr>
+        <td>${value.name}</td>
+        <td>${value.course}</td>
+        <td>${value.email}</td>
+        <td>${value.phone}</td>
+        <td>
+           <button class="btn btn-sm btn-success" onclick="find(${myData.id})">
+             <i class="fa fa-edit"></i>
+             </button>
+         </td>   
+        <td>
+           <button class="btn btn-sm btn-danger" onclick="removeData(${myData.id})">
+             <i class="fa fa-trash"></i>
+             </button>
+         </td>    
+       </tr>
+        `
+    })
+}
+    
+function allData(){
+    // Clear the table first
+    table.innerHTML=``
+    console.log(table)
+    // Get the list of contacts from local storage
+    contactList = JSON.parse(localStorage.getItem("listItem")) ?? [] 
+
+    // Loop through each contact and add it to the table
+    contactList.forEach(function(value,i){
+        // Get the table element
+        let table = document.getElementById("table")
+
+        // Add the contact data to the table
+        table.innerHTML +=`
+        <tr>
+        <td>${i+1}</td>
+        <td>${value.name}</td>
+        <td>${value.course}</td>
+        <td>${value.phone}</td>
+        <td>${value.age}</td>
+        <td>
+           <button class="btn btn-sm btn-success" onclick="find(${value.id})">
+             <i class="fa fa-edit"></i>
+             </button>
+         </td>   
+        <td>
+           <button class="btn btn-sm btn-danger" onclick="removeData(${value.id})">
+             <i class="fa fa-trash"></i>
+             </button>
+         </td>    
+       </tr>
+        `
+    })
+}

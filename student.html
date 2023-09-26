@@ -51,25 +51,24 @@
 
             <div id="details" class="show details-page">
                 <h3 class="headline">Student Form</h3>
-                <form action="" class="student-form">
+                <form action="" class="student-form" id="student-form">
                     <div class="input-container name">
                         <label for="name">Name: </label>
-                        <input type="text" name="Full Name" placeholder="Name" required>
+                        <input type="text" name="Full Name" id="name" placeholder="Name" required>
                     </div>
-                    
-                    <div class="input-container student-age">
-                        <label for="age">Age: </label>
-                        <input type="number" name="Age" placeholder="Age"" required>
+                    <div class="input-container fcourse">
+                        <label for="course">Course: </label>
+                        <input type="text" name="course" id="course" placeholder="Course" required>
                     </div>
                     <div class="input-container email">
                         <label for="email">Email:  </label>
-                        <input type="email" name="Email" placeholder="Email" required>
+                        <input type="email" name="Email" id="email" placeholder="Email" required>
                     </div>
                     <div class="input-container phone">
                         <label for="phone">Phone: </label>
-                        <input type="number" name="phone" placeholder="phone" required>
+                        <input type="tel" name="phone" id="phone" placeholder="phone" required>
                     </div>
-                    <button class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
 
@@ -129,10 +128,9 @@
             <thead>
                 <tr>
                     <th class="namev">Name</th>
-                    <th class="emailv">Email</th>
                     <th class="coursev">Course</th>
+                    <th class="emailv">Email</th>
                     <th class="phonev">Phone</th>
-                    <th class="agev">Age</th>
                     <th>Edit</th>
                     <th>Delete</th>
                 </tr>
