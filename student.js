@@ -2,21 +2,22 @@
 function allData(){
     // Clear the table first
     table.innerHTML=``
+    console.log(table)
     // Get the list of contacts from local storage
-    contactList = JSON.parse(localStorage.getItem("listItem")) ??[] 
+    contactList = JSON.parse(localStorage.getItem("listItem")) ?? [] 
 
     // Loop through each contact and add it to the table
     contactList.forEach(function(value,i){
         // Get the table element
-        var table = document.getElementById("table")
+        let table = document.getElementById("table")
 
         // Add the contact data to the table
         table.innerHTML +=`
         <tr>
         <td>${i+1}</td>
         <td>${value.name}</td>
-        <td>${value.stdClass}</td>
-        <td>${value.tnum}</td>
+        <td>${value.course}</td>
+        <td>${value.phone}</td>
         <td>${value.age}</td>
         <td>
            <button class="btn btn-sm btn-success" onclick="find(${value.id})">
@@ -39,11 +40,11 @@ function save(){
     contactList = JSON.parse(localStorage.getItem("listItem")) ?? []
 
     // Get the id for the new contact
-    var id
+    let id
     contactList.length != 0 ? contactList.findLast((item) => id = item.id) : id = 0
 
     // Check if all fields are filled in
-    if(!document.getElementById('name').value || !document.getElementById('age').value|| !document.getElementById('stdClass').value || !document.getElementById('tnum').value || !document.getElementById('rollNo').value){
+    if(!document.querySelector('.namev').value || !document.querySelector('.agev').value|| !document.querySelector('.emailv').value || !document.querySelector('.phonev').value || !document.querySelector('.coursev').value){
         alert('Please fill in all fields')
         return
     }
@@ -52,11 +53,11 @@ function save(){
     if(document.getElementById('id').value){
         contactList.forEach(value=>{
             if(document.getElementById('id').value == value.id){
-                value.name = document.getElementById('name').value, 
-                value.rollNo = document.getElementById('rollNo').value, 
-                value.stdClass = document.getElementById('stdClass').value, 
-                value.tnum = document.getElementById('tnum').value, 
-                value.age = document.getElementById('age').value
+                value.name = document.querySelector('.namev').value, 
+                value.email = document.querySelector('.emailv').value, 
+                value.course = document.querySelector('.coursev').value, 
+                value.phone = document.querySelector('.phonev').value, 
+                value.age = document.querySelector('.agev').value
             }
         });
 
@@ -67,11 +68,11 @@ function save(){
         var item = {
             id:id+1,
 
-            name : document.getElementById('name').value, 
-            rollNo :  document.getElementById('rollNo').value, 
-            stdClass : document.getElementById('stdClass').value, 
-            tnum : document.getElementById('tnum').value, 
-            age : document.getElementById('age').value
+            name : document.querySelector('.namev').value, 
+            email :  document.querySelector('.emailv').value, 
+            course : document.querySelector('.coursev').value, 
+            phone : document.querySelector('.phonev').value, 
+            age : document.querySelector('.agev').value
 
         }
 
@@ -130,9 +131,52 @@ function removeData(id){
     }
 }
 
-allData()
+// allData()
 
 function clearData(){
     document.getElementById('form').reset()
     document.getElementById('id').value = ""
 }
+
+// Display each tab 
+
+// elements to display
+
+const generate = document.querySelector('#generate');
+const details = document.querySelector('#details');
+const courses = document.querySelector('#courses');
+const settings = document.querySelector('#settings');
+
+// tabs to click 
+
+const generateBtn = document.querySelector('.generate-button');
+const detailsBtn = document.querySelector('.student-details-button');
+const coursesBtn = document.querySelector('.select-course-button');
+const settingsBtn = document.querySelector('.settings-button');
+
+// show/hide selected elements on click of tabs 
+
+detailsBtn.addEventListener('click', function toggle() {
+    details.classList.remove('hide');
+    details.classList.add('show');    
+    courses.classList.add('hide');
+    settings.classList.add('hide')
+})
+coursesBtn.addEventListener('click', function showCourse() {
+    courses.classList.remove('hide');
+    courses.classList.add('show');
+    details.classList.add('hide');
+    settings.classList.add('hide')
+})
+
+settingsBtn.addEventListener('click', function showSettings() {
+    details.classList.add('hide');
+    courses.classList.add('hide');
+    settings.classList.remove('hide')
+    settings.classList.add('show')
+})
+
+
+
+
+generateBtn.addEventListener('click', allData)

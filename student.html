@@ -21,8 +21,6 @@
 </head>
 <body>
 
-<body>
-
     <nav>
         <div class="container nav-container">
             <a href="index.html"><h4>Jerry</h4></a>
@@ -41,28 +39,27 @@
     <section class="container manage-students">
         <div class="manage-student">
             <aside>
-                <image src="./assets/school-logo.avif" alt="school logo" class="icon-magento"></image>
                 <ul class="button-tabs">
-                    <li><button class="button-tab generate">Generate Timetable</button></li>
-                    <li><button class="button-tab select-courses">Select Courses</button></li>
-                    <li><button class="button-tab student-details">Student Details</button></li>
-                    <li><button class="button-tab settings">Settings</button></li>
+                    <li><button class="button-tab generate-button">Generate Timetable</button></li>
+                    <li><button class="button-tab select-course-button">Select Courses</button></li>
+                    <li><button class="button-tab student-details-button">Student Details</button></li>
+                    <li><button class="button-tab settings-button">Settings</button></li>
                 </ul>
             </aside>
-            <div class="details-page">
+            
+            <div class="right-container">
+
+            <div id="details" class="show details-page">
                 <h3 class="headline">Student Form</h3>
                 <form action="" class="student-form">
                     <div class="input-container name">
                         <label for="name">Name: </label>
                         <input type="text" name="Full Name" placeholder="Name" required>
                     </div>
-                    <div class="input-container course-enrolled">
-                        <label for="course">Course:  </label>
-                        <input type="text" name="Course" placeholder="Course" required>
-                    </div>
-                    <div class="input-container student-id">
-                        <label for="id">Id: </label>
-                        <input type="number" name="id" placeholder="Id"" required>
+                    
+                    <div class="input-container student-age">
+                        <label for="age">Age: </label>
+                        <input type="number" name="Age" placeholder="Age"" required>
                     </div>
                     <div class="input-container email">
                         <label for="email">Email:  </label>
@@ -75,23 +72,24 @@
                     <button class="btn btn-primary">Submit</button>
                 </form>
             </div>
-        </div>
 
-        <div class="select-courses">
+        <div id="courses" class="hide select-courses">
             <h3>Courses</h3>
-            <label for="pet-select">Choose a Course:</label>
-            <select title="courses" name="courses" class="select-course decorated">
-              <option value="">--Please choose an option--</option>
-              <option value="dog">Course 1</option>
-              <option value="cat">Course 2</option>
-              <option value="hamster">Course 3</option>
-              <option value="parrot">Course 4</option>
-              <option value="spider">Course 5</option>
-              <option value="goldfish">Course 6</option>
-            </select>
+            <div class="course-options">
+                <label for="pet-select">Choose a Course:</label>
+                <select title="courses" name="courses" class="select-course decorated">
+                  <option value="">--Please choose an option--</option>
+                  <option value="dog">Course 1</option>
+                  <option value="cat">Course 2</option>
+                  <option value="hamster">Course 3</option>
+                  <option value="parrot">Course 4</option>
+                  <option value="spider">Course 5</option>
+                  <option value="goldfish">Course 6</option>
+                </select>
+            </div>
         </div>
 
-        <div class="settings-page">
+        <div id="settings" class="hide settings-page">
             <h3>Settings</h3>
             <form action="" class="settings-form">
                 <div class="current-password">
@@ -118,28 +116,32 @@
                     </div>
                 </div>
             </form>
-        </div>
+        </div>        
+    </div>
 
-        <div class="generate-list">
-            <table class="list" id="stdlist" class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Full Name</th>
-                        <th>Enrollment No</th>
-                        <th>Student Class</th>
-                        <th>Telephone Number</th>
-                        <th>Age</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                    </tr>
-                </thead>
-                <tbody id="table">
-        
-                </tbody>
-            </table>
-        </div>
-    <!-- A table for displaying a list of students -->
-</section>
+     </div>
+
+        <!-- A table for displaying a list of students -->
+    </section>
+
+    <div id="generate" class="generate-list">
+        <table class="list" id="stdlist" class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="namev">Name</th>
+                    <th class="emailv">Email</th>
+                    <th class="coursev">Course</th>
+                    <th class="phonev">Phone</th>
+                    <th class="agev">Age</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="table">
+    
+            </tbody>
+        </table>
+    </div>
 
     <footer class="footer">
         <div class="container footer-container">
