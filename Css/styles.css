@@ -173,6 +173,7 @@ header {
 .nav-container h4:hover {
     color: var(--color-danger);
     font-size: 150%;
+    transition: var(--transition);
 }
 
 .header-left p {
@@ -272,11 +273,11 @@ header {
 }
 
 .course-info {
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
-course-info p {
-    margin: 1.2rem 0 2rem;
+.course-info p {
+    margin: 0.5rem;
     font-size: 0.9rem;
 }
 
@@ -284,6 +285,7 @@ course-info p {
     width: 50%;
     height: 70%;
     margin: auto;
+    margin-top: 2rem;
 }
 
 .faqs {
