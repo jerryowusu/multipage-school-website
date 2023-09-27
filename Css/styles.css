@@ -149,7 +149,8 @@ nav button {
 }
 
 .nav-menu a:hover {
-    color: var(--color-bg2);
+    color: var(--color-danger);
+    font-size: 150%;
 }
 
 header {
@@ -167,6 +168,12 @@ header {
     align-items: center;
     gap: 5rem;
     height: 100%;
+}
+
+.nav-container h4:hover {
+    color: var(--color-danger);
+    font-size: 150%;
+    transition: var(--transition);
 }
 
 .header-left p {
@@ -266,11 +273,11 @@ header {
 }
 
 .course-info {
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
-course-info p {
-    margin: 1.2rem 0 2rem;
+.course-info p {
+    margin: 0.5rem;
     font-size: 0.9rem;
 }
 
@@ -278,6 +285,7 @@ course-info p {
     width: 50%;
     height: 70%;
     margin: auto;
+    margin-top: 2rem;
 }
 
 .faqs {
@@ -409,7 +417,8 @@ footer ul li a:hover {
 
 .copyright {
     text-align: center;
-    margin-top: 4rem;
+    width: 100%;
+    margin: auto;
     padding: 1.2rem 0; 
     border-top: 1px solid var(--color-bg2);
 }
@@ -507,7 +516,6 @@ footer ul li a:hover {
     }
 
     header {
-        height: 52vh;
         margin-bottom: 4rem;
     }
 
@@ -517,7 +525,7 @@ footer ul li a:hover {
     }
 
     .categories {
-        height: auto;;
+        height: auto;
     }
 
     .categories-container {

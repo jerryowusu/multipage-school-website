@@ -7,6 +7,8 @@ footer {
 }
 
 .manage-students {
+    display: flex;
+    flex-direction: column;
     margin: 10rem auto;
     padding: 1rem 1rem;
     background: var(--color-bg1);
@@ -148,10 +150,10 @@ label {
   .generate-list {
     /* display: grid; */
     /* gap: 4rem; */
-    width: var(--container-width-sm);
+    width: var(--container-width-lg);
     margin: auto;
     background: var(--color-bg1);
-    box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5)
+    /* box-shadow: inset 0 0 3rem rgba(0, 0, 0, 0.5) */
   }
 
   .list {
@@ -168,13 +170,40 @@ label {
     display: none;
   }
 
-  .list tr {
-    display: flex;
-    /* grid-template-colomn: 1fr; */
-    justify-content: space-between;
-    gap: 5%;
-    padding: 0.7rem 1rem;
-    /* width: 100%; */
+  table.list{
+    padding: 3rem;
+    width: 90%;
+    text-align: center;
+}
+
+table.list td{
+    text-align: center;
+}
+
+table th {
+  text-align: center;
+}
+
+.active {
+  /* background: var(--color-danger); */
+  background: var(--color-bg2);
+  color: var(--color-white)
+}
+
+td,th{
+    /* border: 0.2px solid #dddddd; */
+    border: 0.2px solid var(--color-bg2);
+    text-align: left;
+    padding: 0 0.2rem;
+}
+
+.table-button {
+  /* background:green; */
+  padding: 0.3rem 0.8rem;
+}
+
+tr:nth-child(even),table.list thead>tr{
+  background: var(--color-bg2)
 }
 
   /* Media queries */
