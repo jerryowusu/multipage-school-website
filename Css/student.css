@@ -184,6 +184,12 @@ table th {
   text-align: center;
 }
 
+.active {
+  /* background: var(--color-danger); */
+  background: var(--color-bg2);
+  color: var(--color-white)
+}
+
 td,th{
     /* border: 0.2px solid #dddddd; */
     border: 0.2px solid var(--color-bg2);
