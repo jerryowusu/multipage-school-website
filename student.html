@@ -40,7 +40,7 @@
         <div class="manage-student">
             <aside>
                 <ul class="button-tabs">
-                    <li><button class="button-tab generate-button">Generate Timetable</button></li>
+                    <li><button class="button-tab generate-button" onclick="allData()">Generate Timetable</button></li>
                     <li><button class="button-tab select-course-button">Select Courses</button></li>
                     <li><button class="button-tab student-details-button">Student Details</button></li>
                     <li><button class="button-tab settings-button">Settings</button></li>
@@ -48,10 +48,10 @@
             </aside>
             
             <div class="right-container">
-
             <div id="details" class="show details-page">
                 <h3 class="headline">Student Form</h3>
                 <form action="" class="student-form" id="student-form">
+                    <input type="hidden" name="id" id="id">
                     <div class="input-container name">
                         <label for="name">Name: </label>
                         <input type="text" name="Full Name" id="name" placeholder="Name" required>
@@ -68,7 +68,7 @@
                         <label for="phone">Phone: </label>
                         <input type="tel" name="phone" id="phone" placeholder="phone" required>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" id="submit" class="btn btn-primary" onclick="save()" >Submit</button>
                 </form>
             </div>
 
@@ -121,18 +121,18 @@
      </div>
 
         <!-- A table for displaying a list of students -->
-    </section>
 
     <div id="generate" class="generate-list">
         <table class="list" id="stdlist" class="table table-striped">
             <thead>
                 <tr>
+                    <th class="id">ID</th>
                     <th class="namev">Name</th>
                     <th class="coursev">Course</th>
                     <th class="emailv">Email</th>
                     <th class="phonev">Phone</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
+                    <!-- <th>Edit</th>
+                    <th>Delete</th> -->
                 </tr>
             </thead>
             <tbody id="table">
@@ -140,6 +140,8 @@
             </tbody>
         </table>
     </div>
+</section>
+
 
     <footer class="footer">
         <div class="container footer-container">
