@@ -17,10 +17,11 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 To-Do List <a name="about-project"></a>
-
+# 📖 Multipage school website <a name="about-project"></a>
 
 This is a school website crafted and constructed as the concluding project presentation for the conferment of a Bachelor of Computer Applications degree.
+
+[Live Link](https://jerryowusu.github.io/multipage-school-website)
 
 ## 🛠 Built With HTML, CSS and JS <a name="built-with"></a>
 

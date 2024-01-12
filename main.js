@@ -31,7 +31,6 @@ faqs.forEach((faq) => {
 const menu = document.querySelector('.nav-menu');
 const menuBtn = document.querySelector('#open-menu-btn');
 const closeBtn = document.querySelector('#close-menu-btn');
-const navButtons = document.querySelectorAll('.nav-menu a')
 
 const openNav = () => {
     menu.style.display = 'flex';
@@ -49,10 +48,6 @@ const closeNav = () => {
 
 menuBtn.addEventListener('click', openNav);
 closeBtn.addEventListener('click', closeNav);
-
-navButtons.forEach(function(btn) {
-    btn.addEventListener('click', closeNav)
-})
 
 
 
