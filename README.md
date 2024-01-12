@@ -115,6 +115,7 @@ Please leave me review if you have any questions or remarks.
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 Grateful to the HTML, CSS, and bootstrap team for creating such wonderful tools.
+Major thanks goes to Amity University for giving me this platform to hone and upgrade my skills
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
